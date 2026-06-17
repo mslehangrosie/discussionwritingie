@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ms Lê Hằng English - IELTS Writing Task 2 Elite Trainer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-pink: #FF6B8B;
+            --primary-bg: linear-gradient(135deg, #8854C0, #6C5CE7);
+            --correct-color: #00D26A;
+            --wrong-color: #FF4757;
+            --card-bg: #ffffff;
+            --text-dark: #2d3436;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FF9999, #FDCB6E, #00C9A7);
+            background-attachment: fixed;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M9 24c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm32 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6zm-24 16c0-1.7 1.3-3 3-3s3 1.3 3 3-1.3 3-3 3-3-1.3-3-3zm18-36c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5z' fill='%23ffffff' fill-opacity='0.15'/%3E%3C/svg%3E");
+            color: var(--text-dark);
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--brand-pink);
+            background: white;
+            display: inline-block;
+            padding: 0.4rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 0px rgba(0,0,0,0.1);
+            border: 3px solid var(--brand-pink);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            background: rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            padding: 0.6rem 1.8rem;
+            border-radius: 30px;
+            margin-top: 1.2rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .layout-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 992px) {
+            .layout-grid { grid-template-columns: 1fr; }
+        }
+
+        .sidebar {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 24px;
+            box-shadow: 0 12px 0px rgba(0,0,0,0.05);
+            border: 4px solid #e2e8f0;
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 1.25rem;
+            color: #6C5CE7;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            border-bottom: 3px dashed #edf2f7;
+            padding-bottom: 0.5rem;
+        }
+
+        .menu-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 1rem;
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-bottom: 5px solid #cbd5e1;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.15s ease;
+        }
+
+        .menu-btn:hover {
+            transform: translateY(-2px);
+            border-bottom-width: 7px;
+        }
+
+        .menu-btn.active {
+            background: var(--primary-bg);
+            color: white;
+            border-color: #6C5CE7;
+            border-bottom: 5px solid #4b34a3;
+        }
+
+        .main-container {
+            background: var(--card-bg);
+            border-radius: 28px;
+            padding: 2.5rem;
+            box-shadow: 0 16px 0px rgba(0,0,0,0.08);
+            border: 4px solid #e2e8f0;
+        }
+
+        .prompt-box {
+            background: #f8fafc;
+            padding: 1.8rem;
+            border-radius: 22px;
+            border-left: 8px solid var(--brand-pink);
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .tabs { grid-template-columns: 1fr; }
+        }
+
+        .tab-link {
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-bottom: 6px solid #cbd5e1;
+            background: #fff;
+            border-radius: 18px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.15s ease;
+        }
+
+        .tab-link.active {
+            background: #00C9A7;
+            color: white;
+            border-color: #00b093;
+            border-bottom: 6px solid #00856f;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .template-box {
+            background: #fff9db;
+            border: 3px solid #ffe066;
+            padding: 1.8rem;
+            border-radius: 22px;
+            margin-bottom: 1.5rem;
+        }
+
+        .template-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .template-table td {
+            padding: 12px;
+            border: 1px solid #ffe066;
+            vertical-align: top;
+            font-size: 1.05rem;
+        }
+
+        .tag {
+            background: #8854C0;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid #edf2f7;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #edf2f7;
+            font-size: 1.05rem;
+        }
+
+        th { background: #f1f5f9; color: #4b34a3; font-weight: 700; }
+
+        .essay-box {
+            background: #fafafa;
+            border: 3px solid #e2e8f0;
+            padding: 2rem;
+            border-radius: 20px;
+            font-family: 'Georgia', serif;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            white-space: pre-line;
+            color: #2d3436;
+        }
+
+        .quiz-card {
+            background: #fdf2f8;
+            border: 3px dashed var(--brand-pink);
+            padding: 2rem;
+            border-radius: 24px;
+            margin-top: 1.5rem;
+        }
+
+        .quiz-progress {
+            font-weight: 700;
+            color: #db2777;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .quiz-question-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #4b34a3;
+            line-height: 1.5;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .opt-btn {
+            background: white;
+            border: 2px solid #cbd5e1;
+            border-bottom: 5px solid #cbd5e1;
+            padding: 1.2rem;
+            border-radius: 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        .shake {
+            animation: shake 0.25s ease-in-out 2;
+            background-color: var(--wrong-color) !important;
+            color: white !important;
+        }
+
+        .correct {
+            background-color: var(--correct-color) !important;
+            color: white !important;
+            border-bottom-width: 2px !important;
+        }
+
+        .score-board { text-align: center; padding: 2rem; }
+        .score-board h2 { color: #00D26A; font-size: 2.3rem; margin-bottom: 1rem; }
+        .reset-btn { background: var(--primary-bg); color: white; border: none; padding: 1rem 2rem; font-size: 1.1rem; font-weight: 700; border-radius: 15px; cursor: pointer; margin-top: 1rem; }
+        #confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
+    </style>
+</head>
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <header>
+        <h1>Ms Lê Hằng English</h1>
+        <br>
+        <p>Hệ Thống Phân Tích Ý & Tương Tác Đạt Chuẩn IELTS Writing Band 6.5 - 8.0+ 🎯</p>
+    </header>
+
+    <div class="layout-grid">
+        <div class="sidebar">
+            <h3>Danh Sách 5 Đề Bài</h3>
+            <div id="topic-menu-container"></div>
+        </div>
+
+        <div class="main-container">
+            <div class="prompt-box" id="current-prompt">Đang tải đề bài...</div>
+
+            <div class="tabs">
+                <button class="tab-link active" onclick="changeTab(event, 'tab-template')">Template Gốc Trong Ảnh</button>
+                <button class="tab-link" onclick="changeTab(event, 'tab-baiviet')">Bài Mẫu Đạt Chuẩn (250+ từ)</button>
+                <button class="tab-link" onclick="changeTab(event, 'tab-hethong')">Hệ Thống Từ Vựng & Cấu Trúc</button>
+                <button class="tab-link" onclick="changeTab(event, 'tab-quiz')">🔥 20 Câu Hỏi Xoáy Chiến Thuật</button>
+            </div>
+
+            <div id="tab-template" class="tab-content active">
+                <div class="template-box">
+                    <h3 style="color:#d9480f; margin-bottom: 1rem; font-weight:700;">Structure of your answer (Template đối chiếu):</h3>
+                    <table class="template-table">
+                        <tr>
+                            <td width="20%"><span class="tag">Introduction</span></td>
+                            <td>
+                                • <strong>Introduce the topic:</strong> "People have differing views with regard to + topic (noun phrase)...."<br>
+                                • <strong>Give your answer:</strong> "While some people hold the opinion that + view 1 (clause), I believe that + view 2 (clause)"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">Body 1</span></td>
+                            <td>
+                                • <strong>Introduce view 1 and give explanation(s) and example(s) to support this view:</strong><br>
+                                "On the one hand, there are some reasons why a common belief is that + view 1 (clause).... The main cause is + supporting idea 1 (clause).... Another reason is + supporting idea 2 (clause) ..."
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">Body 2</span></td>
+                            <td>
+                                • <strong>State that you support view 2 and give explanation(s) and example(s) to support the second view:</strong><br>
+                                "On the other hand, I believe that + view 2 (clause). Firstly, ..... Secondly, ..... Finally, ......"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">Conclusion</span></td>
+                            <td>"In conclusion, while + view 1 (clause), I believe that + view 2 (clause)"</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="tab-baiviet" class="tab-content">
+                <div class="essay-box" id="current-essay"></div>
+                <div style="margin-top:1rem; font-weight:700; color:#555; font-size:1rem; text-align:right;" id="word-count-display"></div>
+            </div>
+
+            <div id="tab-hethong" class="tab-content">
+                <h3 style="color:#4b34a3; margin-bottom:1rem;">I. Hệ thống 20 Cụm Từ Vựng Đắt Giá (Dễ dùng, dễ ăn điểm)</h3>
+                <table id="vocab-table">
+                    <thead><tr><th>Từ vựng / Cụm từ hay</th><th>Ý nghĩa thực tế trong bài</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+
+                <h3 style="color:#4b34a3; margin-top:2rem; margin-bottom:1rem;">II. Hệ thống cấu trúc ngữ pháp ăn điểm tiêu chí GRA & CC</h3>
+                <table id="grammar-table">
+                    <thead><tr><th>Cấu trúc liên kết & ngữ pháp cốt lõi</th><th>Mục đích sử dụng nâng Band</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div id="tab-quiz" class="tab-content">
+                <div class="quiz-card" id="quiz-box">
+                    <div class="quiz-progress" id="quiz-progress"></div>
+                    <div class="quiz-question-text" id="quiz-question"></div>
+                    <div class="options-grid" id="quiz-options"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // CƠ SỞ DỮ LIỆU ĐỒ SỘ TÍCH HỢP TOÀN BỘ 5 ĐỀ BÀI HOÀN CHỈNH (EACH 20 QUESTIONS)
+        const database = {
+            1: {
+                prompt: "ĐỀ 1: Some people think that climate change could have a negative effect on business, while others think that it could create more business opportunities. Discuss both views and give your own opinion.",
+                wordCount: "Tổng số từ: 295 từ (Đạt chuẩn tối thiểu 250 từ)",
+                essay: `<strong>Introduction</strong>\nOpinions are divided on whether climate change will harm businesses or create new opportunities for them. Although this global phenomenon could open up certain business prospects, I believe its negative impacts on commercial activities are far more significant.\n\n<strong>Body 1</strong>\nAdmittedly, climate-related challenges may generate some economic opportunities for forward-thinking companies. First of all, one of them is the growth of green technology and innovation, as businesses increasingly invest in developing sustainable solutions such as solar panels and electric vehicles. This not only creates new job opportunities but also generates substantial profit from selling these eco-friendly products to environmentally conscious consumers. Furthermore, another opportunity lies in the emerging carbon trading market, where governments have established carbon credit systems that allow companies to earn revenue. By reducing their emissions and selling excess credits to other businesses, organizations can turn their environmental efforts into a profitable venture.\n\n<strong>Body 2</strong>\nHowever, I am convinced that the detrimental effects of climate change on businesses outweigh these potential benefits. To begin with, the most apparent issue is how extreme weather events constantly disrupt normal operations. For instance, floods and storms frequently force factories to shut down temporarily, which leads to production delays and significant revenue losses that can threaten a company's survival. Additionally, from an agricultural perspective, the damage is even more severe, as droughts and unpredictable rainfall patterns destroy crops on a massive scale. This not only causes farmers to lose their income but also drives food prices to increase dramatically, affecting the entire supply chain and making it difficult for food-related businesses to maintain stability.\n\n<strong>Conclusion</strong>\nIn conclusion, although climate change might create opportunities in areas such as green technology and carbon trading, I believe its negative consequences, particularly through extreme weather disruption and agricultural damage, pose far greater threats to the business world.`,
+                vocab: [
+                    {w: "global phenomenon", m: "hiện tượng toàn cầu"},
+                    {w: "open up certain business prospects", m: "mở ra những triển vọng kinh doanh nhất định"},
+                    {w: "commercial activities", m: "các hoạt động thương mại"},
+                    {w: "forward-thinking companies", m: "các công ty có tư duy tiến bộ, nhìn xa trông rộng"},
+                    {w: "sustainable solutions", m: "các giải pháp mang tính bền vững"},
+                    {w: "generate substantial profit", m: "tạo ra nguồn lợi nhuận lớn / đáng kể"},
+                    {w: "environmentally conscious consumers", m: "những người tiêu dùng có ý thức bảo vệ môi trường"},
+                    {w: "emerging carbon trading market", m: "thị trường mua bán tín chỉ carbon đang nổi lên"},
+                    {w: "turn environmental efforts into...", m: "biến những nỗ lực môi trường thành..."},
+                    {w: "profitable venture", m: "dự án kinh doanh sinh lời / có lãi"},
+                    {w: "detrimental effects", m: "những tác động tiêu cực, gây hại"},
+                    {w: "outweigh potential benefits", m: "vượt trội hơn / lớn hơn những lợi ích tiềm năng"},
+                    {w: "extreme weather events", m: "các hiện tượng thời thiết cực đoan (bão, lũ...)"},
+                    {w: "disrupt normal operations", m: "làm gián đoạn các hoạt động bình thường"},
+                    {w: "production delays", m: "sự chậm trễ trong quá trình sản xuất"},
+                    {w: "threaten a company's survival", m: "đe dọa đến sự sống còn của doanh nghiệp"},
+                    {w: "agricultural perspective", m: "góc nhìn từ ngành nông nghiệp"},
+                    {w: "destroy crops on a massive scale", m: "phá hủy mùa màng trên quy mô lớn"},
+                    {w: "affect the entire supply chain", m: "tác động đến toàn bộ chuỗi cung ứng"},
+                    {w: "maintain stability", m: "duy trì sự ổn định"}
+                ],
+                grammar: [
+                    {c: "Opinions are divided on whether...", m: "Mở bài thu hút, giới thiệu 2 luồng ý kiến trái ngược."},
+                    {c: "This not only creates... but also generates...", m: "Cấu trúc song hành (Not only... but also) tăng điểm ngữ pháp."},
+                    {c: "...affecting the entire supply chain and making it difficult for...", m: "Phân từ hiện tại (V-ing) rút gọn thể hiện mối quan hệ nguyên nhân - kết quả."}
+                ],
+                quiz: [
+                    {q: "1. Đâu là Thesis Statement chính xác thể hiện lập trường của tác giả ở Introduction Đề 1?", o: ["Mở đầu bằng 'Opinions are divided...'", "Câu 2: 'Although this global phenomenon could open up... I believe its negative impacts... are far more significant.'", "Bài viết hoàn toàn trung lập."], a: "Câu 2: 'Although this global phenomenon could open up... I believe its negative impacts... are far more significant.'"},
+                    {q: "2. Cụm từ 'forward-thinking companies' mang nghĩa gì?", o: ["Các công ty lạc hậu", "Các công ty có tư duy tiến bộ, nhìn xa trông rộng", "Các công ty tài chính"], a: "Các công ty có tư duy tiến bộ, nhìn xa trông rộng"},
+                    {q: "3. Nhờ đâu doanh nghiệp xanh có thể 'generate substantial profit'?", o: ["Nhờ chính phủ tài trợ 100%", "Nhờ bán sản phẩm thân thiện môi trường cho khách hàng có ý thức bảo vệ trái đất", "Nhờ cắt giảm nhân sự"], a: "Nhờ bán sản phẩm thân thiện môi trường cho khách hàng có ý thức bảo vệ trái đất"},
+                    {q: "4. Cơ hội thứ hai được phân tích sâu ở Body 1 là gì?", o: ["Thị trường nông sản mới", "Thị trường giao dịch/mua bán tín chỉ carbon (carbon trading market)", "Thị trường năng lượng dầu mỏ"], a: "Thị trường giao dịch/mua bán tín chỉ carbon (carbon trading market)"},
+                    {q: "5. Từ nối phản bác 'However' ở đầu Body 2 nhằm mục đích gì?", o: ["Thêm thông tin bổ sung", "Bắt đầu chuyển hướng sang mặt tác hại tiêu cực - lập trường cốt lõi của tác giả", "Dẫn chứng một ví dụ"], a: "Bắt đầu chuyển hướng sang mặt tác hại tiêu cực - lập trường cốt lõi của tác giả"},
+                    {q: "6. Điền từ collocation thích hợp: 'disrupt normal _________'", o: ["operations", "benefits", "vatures"], a: "operations"},
+                    {q: "7. Extreme weather events gây ra hậu quả gì cho các nhà máy ở Body 2?", o: ["Tăng năng suất sản xuất", "Bị ép đóng cửa tạm thời, dẫn tới sản xuất chậm trễ và thất thu lớn", "Đổi sang dùng điện mặt trời"], a: "Bị ép đóng cửa tạm thời, dẫn tới sản xuất chậm trễ và thất thu lớn"},
+                    {q: "8. Từ góc nhìn nông nghiệp (agricultural perspective), thiên tai phá hoại điều gì?", o: ["Nhà xưởng cơ khí", "Mùa màng trên quy mô lớn (crops on a massive scale)", "Thị trường chứng khoán"], a: "Mùa màng trên quy mô lớn (crops on a massive scale)"},
+                    {q: "9. Giá thực phẩm tăng cao đột biến (food prices increase dramatically) sẽ kéo theo hệ lụy gì?", o: ["Giúp nông dân giàu lên", "Ảnh hưởng xấu đến toàn bộ chuỗi cung ứng, gây khó khăn cho doanh nghiệp thực phẩm", "Giảm lượng rác thải khí nhà kính"], a: "Ảnh hưởng xấu đến toàn bộ chuỗi cung ứng, gây khó khăn cho doanh nghiệp thực phẩm"},
+                    {q: "10. Cấu trúc kết bài 'In conclusion, although... I believe...' được dùng để làm gì?", o: ["Nhắc lại luận điểm hai mặt và khẳng định chắc chắn mối đe dọa của biến đổi khí hậu là lớn hơn", "Đưa ra lời khuyên mới", "Thay đổi ý kiến hoàn toàn"], a: "Nhắc lại luận điểm hai mặt và khẳng định chắc chắn mối đe dọa của biến đổi khí hậu là lớn hơn"},
+                    {q: "11. 'Detrimental effects' đồng nghĩa với từ nào?", o: ["Positive impacts", "Negative impacts / Harmful effects", "Economic benefits"], a: "Negative impacts / Harmful effects"},
+                    {q: "12. Cụm từ nào nghĩa là 'dự án kinh doanh sinh lời'?", o: ["profitable venture", "sustainable solution", "commercial activity"], a: "profitable venture"},
+                    {q: "13. Bản chất của Carbon credit system là gì?", o: ["Hệ thống phạt tiền công ty gây ô nhiễm", "Hệ thống cho phép các công ty giảm phát thải bán tín chỉ thừa để kiếm doanh thu", "Hệ thống trồng rừng miễn phí"], a: "Hệ thống cho phép các công ty giảm phát thải bán tín chỉ thừa để kiếm doanh thu"},
+                    {q: "14. Từ 'threaten a company's survival' nghĩa là gì?", o: ["Hỗ trợ công ty phát triển", "Đe dọa đến sự sống còn của một công ty", "Mở rộng chi nhánh quốc tế"], a: "Đe dọa đến sự sống còn của một công ty"},
+                    {q: "15. Tại sao cấu trúc 'Not only... but also...' giúp ăn điểm ngữ pháp cao?", o: ["Vì nó là câu đơn giản ngắn gọn", "Vì nó là cấu trúc câu phức/câu ghép song hành nâng cao độ đa dạng câu", "Vì nó bắt buộc phải viết dài"], a: "Vì nó là cấu trúc câu phức/câu ghép song hành nâng cao độ đa dạng câu"},
+                    {q: "16. Điền từ phù hợp: 'affecting the entire supply _________'", o: ["chain", "link", "system"], a: "chain"},
+                    {q: "17. 'Environmentally conscious consumers' nghĩa là gì?", o: ["Người tiêu dùng chỉ mua hàng giảm giá", "Người tiêu dùng có ý thức bảo vệ môi trường", "Các nhà đầu tư quốc tế"], a: "Người tiêu dùng có ý thức bảo vệ môi trường"},
+                    {q: "18. Điền từ thích hợp: 'maintain _________' (duy trì sự ổn định).", o: ["stability", "delay", "phenomenon"], a: "stability"},
+                    {q: "19. Điểm mấu chốt để đạt Band cao tiêu chí Task Achievement trong bài này là gì?", o: ["Liệt kê càng nhiều ý nhỏ càng tốt mà không giải thích", "Phát triển luận điểm sâu theo chuỗi logic: Core Idea -> Reason -> Result/Example rõ ràng", "Dùng nhiều từ vựng cổ điển cực khó"], a: "Phát triển luận điểm sâu theo chuỗi logic: Core Idea -> Reason -> Result/Example rõ ràng"},
+                    {q: "20. Cụm từ 'global phenomenon' ám chỉ điều gì trong đề bài này?", o: ["Sự phát triển kinh tế toàn cầu", "Biến đổi khí hậu toàn cầu", "Sự bùng nổ của mạng xã hội"], a: "Biến đổi khí hậu toàn cầu"}
+                ]
+            },
+            2: {
+                prompt: "ĐỀ 2: Some people believe schools should provide more extracurricular activities to support students’ overall development, while others think schools should concentrate mainly on academic learning. Discuss both views and give your opinion.",
+                wordCount: "Tổng số từ: 288 từ (Đạt chuẩn tối thiểu 250 từ)",
+                essay: `<strong>Introduction</strong>\nOpinions are divided on whether educational institutions should offer more extracurricular programs or focus strictly on core academic study. Although outdoor activities are highly beneficial for personal growth, I believe that prioritizing formal qualifications and classroom knowledge is far more crucial for a student's future.\n\n<strong>Body 1</strong>\nAdmittedly, practical non-academic activities play a vital role in fostering real-world soft skills. Firstly, participating in sports, drama groups, or debate teams forces students to engage in teamwork and clear communication. As a result, youngsters can develop active lifestyles and build up self-confidence, which helps them adapt better to their daily social environments. Furthermore, structured recreational programs serve as an excellent stress-relief mechanism, preventing academic burnout and promoting mental well-being after demanding exam periods.\n\n<strong>Body 2</strong>\nHowever, I am convinced that an intensive focus on academic subjects brings much greater lifelong advantages. To begin with, achieving outstanding academic results is an absolute requirement for higher education entrance. Because top universities select applicants based primarily on standardized test scores, high schools must prioritize comprehensive lectures on core subjects. This ensures that students can secure prestigious degrees, which open up better career options. Additionally, specialized theoretical knowledge is indispensable for technical professional paths such as medicine, engineering, and software programming. Without deep academic training, students cannot satisfy the strict labor requirements of the modern workplace.\n\n<strong>Conclusion</strong>\nIn conclusion, while extracurricular activities are useful for developing social confidence and relieving stress, I believe that concentrating heavily on academic performance must remain the main objective of modern schools to guarantee career success.`,
+                vocab: [
+                    {w: "educational institutions", m: "các cơ sở giáo dục / trường học"},
+                    {w: "extracurricular programs", m: "các chương trình ngoại khóa"},
+                    {w: "prioritizing formal qualifications", m: "ưu tiên bằng cấp chính quy"},
+                    {w: "fostering real-world soft skills", m: "nuôi dưỡng kỹ năng mềm thực tế"},
+                    {w: "engage in teamwork", m: "tham gia vào việc làm việc nhóm"},
+                    {w: "adapt better to", m: "thích nghi tốt hơn với"},
+                    {w: "stress-relief mechanism", m: "cơ chế giải tỏa căng thẳng"},
+                    {w: "academic burnout", m: "sự kiệt sức do áp lực học tập quá tải"},
+                    {w: "promoting mental well-being", m: "thúc đẩy sức khỏe tinh thần lành mạnh"},
+                    {w: "intensive focus on", m: "sự tập trung chuyên sâu vào"},
+                    {w: "achieving outstanding academic results", m: "đạt được kết quả học tập xuất sắc"},
+                    {w: "higher education entrance", m: "việc thi tuyển / bước vào đại học"},
+                    {w: "select applicants based primarily on", m: "tuyển chọn ứng viên dựa chủ yếu vào"},
+                    {w: "standardized test scores", m: "điểm số của các bài thi chuẩn hóa"},
+                    {w: "secure prestigious degrees", m: "đảm bảo có được những tấm bằng danh giá"},
+                    {w: "specialized theoretical knowledge", m: "kiến thức lý thuyết chuyên sâu"},
+                    {w: "indispensable for", m: "hoàn toàn không thể thiếu đối với"},
+                    {w: "strict labor requirements", m: "những yêu cầu lao động khắt khe"},
+                    {w: "concentrating heavily on", m: "tập trung cực kỳ nặng nề vào"},
+                    {w: "main objective", m: "mục tiêu cốt lõi / chính yếu"}
+                ],
+                grammar: [
+                    {c: "Although outdoor activities are... I believe that...", m: "Mệnh đề nhượng bộ với Although làm tăng tính khách quan."},
+                    {c: "Because top universities select... high schools must...", m: "Mệnh đề nguyên nhân - kết quả logic mạch lạc."},
+                    {c: "Without deep academic training, students cannot...", m: "Câu điều kiện ẩn dạng rút gọn với cụm từ Without."}
+                ],
+                quiz: [
+                    {q: "1. Tác giả bảo vệ quan điểm nào trong Đề 2?", o: ["Ngoại khóa quan trọng hơn", "Học thuật và bằng cấp chính quy quan trọng hơn", "Bỏ học đi làm từ sớm"], a: "Học thuật và bằng cấp chính quy quan trọng hơn"},
+                    {q: "2. Cụm từ 'fostering real-world soft skills' ở Body 1 nghĩa là gì?", o: ["Bắt chước các kỹ năng cũ", "Nuôi dưỡng các kỹ năng mềm thực tế", "Học kiến thức toán lý hóa lý thuyết"], a: "Nuôi dưỡng các kỹ năng mềm thực tế"},
+                    {q: "3. Tham gia câu lạc bộ thể thao hay tranh biện giúp học sinh rèn luyện điều gì?", o: ["Làm việc nhóm và giao tiếp rõ ràng (teamwork & clear communication)", "Kiếm tiền tiêu vặt", "Đạt điểm thi đại học cao tuyệt đối"], a: "Làm việc nhóm và giao tiếp rõ ràng (teamwork & clear communication)"},
+                    {q: "4. Lợi ích thứ hai của hoạt động ngoại khóa ở Body 1 là gì?", o: ["Giúp học sinh có bằng tốt nghiệp sớm", "Là cơ chế giải tỏa căng thẳng (stress-relief mechanism) tránh kiệt sức học tập", "Tăng chiều cao tự nhiên"], a: "Là cơ chế giải tỏa căng thẳng (stress-relief mechanism) tránh kiệt sức học tập"},
+                    {q: "5. 'Academic burnout' mang ý nghĩa gì?", o: ["Sự hào hứng học tập", "Sự kiệt sức, quá tải do áp lực học hành thi cử", "Kết quả học tập xuất sắc"], a: "Sự kiệt sức, quá tải do áp lực học hành thi cử"},
+                    {q: "6. Tại sao trường học phải ưu tiên các bài giảng học thuật cốt lõi ở Body 2?", o: ["Vì học sinh không thích thể thao", "Vì các trường đại học tuyển sinh dựa chủ yếu vào điểm số bài thi chuẩn hóa", "Vì giáo viên lười tổ chức sự kiện"], a: "Vì các trường đại học tuyển sinh dựa chủ yếu vào điểm số bài thi chuẩn hóa"},
+                    {q: "7. Đâu là cụm từ đồng nghĩa với 'get a good degree'?", o: ["secure prestigious degrees", "foster real-world soft skills", "promote mental well-being"], a: "secure prestigious degrees"},
+                    {q: "8. Những ngành chuyên môn như y học, kỹ thuật yêu cầu loại kiến thức gì?", o: ["Kiến thức kỹ năng giao tiếp cơ bản", "Kiến thức lý thuyết chuyên sâu (specialized theoretical knowledge)", "Kinh nghiệm chơi thể thao"], a: "Kiến thức lý thuyết chuyên sâu (specialized theoretical knowledge)"},
+                    {q: "9. Nếu thiếu đào tạo học thuật sâu sắc ('Without deep academic training'), học sinh sẽ gặp khó khăn gì?", o: ["Không thể kết bạn mới", "Không đáp ứng được yêu cầu lao động khắt khe của thị trường hiện đại", "Bị béo phì"], a: "Không đáp ứng được yêu cầu lao động khắt khe của thị trường hiện đại"},
+                    {q: "10. Từ 'indispensable' có nghĩa là gì?", o: ["Có cũng được không có cũng được", "Hoàn toàn không thể thiếu / cực kỳ bắt buộc", "Rất lỗi thời"], a: "Hoàn toàn không thể thiếu / cực kỳ bắt buộc"},
+                    {q: "11. Từ nào đồng nghĩa với 'schools' ở Introduction?", o: ["educational institutions", "extracurricular programs", "prestigious degrees"], a: "educational institutions"},
+                    {q: "12. Điền từ thích hợp: 'achieving outstanding academic _________'", o: ["results", "burnout", "mechanisms"], a: "results"},
+                    {q: "13. Điền từ thích hợp: 'higher education _________'", o: ["entrance", "lecture", "qualification"], a: "entrance"},
+                    {q: "14. Cụm từ 'mental well-being' có nghĩa là gì?", o: ["Sức khỏe thể chất", "Sức khỏe tinh thần lành mạnh", "Áp lực tâm lý nặng nề"], a: "Sức khỏe tinh thần lành mạnh"},
+                    {q: "15. 'Standardized test scores' dùng để chỉ điều gì?", o: ["Điểm số của các bài thi chuẩn hóa quốc gia/quốc tế", "Điểm rèn luyện ngoại khóa", "Phiếu đánh giá của phụ huynh"], a: "Điểm số của các bài thi chuẩn hóa quốc gia/quốc tế"},
+                    {q: "16. Trong câu 'Although outdoor activities are... I believe...', mệnh đề 'Although' có tác dụng gì?", o: ["Làm câu văn dài ra vô nghĩa", "Tạo sự cân bằng lập luận, công nhận một phần lợi ích nhỏ trước khi đưa ra luận điểm chính", "Dùng để bác bỏ hoàn toàn"], a: "Tạo sự cân bằng lập luận, công nhận một phần lợi ích nhỏ trước khi đưa ra luận điểm chính"},
+                    {q: "17. Điền từ: 'strict labor _________'", o: ["requirements", "lectures", "options"], a: "requirements"},
+                    {q: "18. Từ 'main objective' có nghĩa là gì?", o: ["Mục tiêu cốt lõi / chính yếu", "Ý kiến phản đối", "Kết quả phụ"], a: "Mục tiêu cốt lõi / chính yếu"},
+                    {q: "19. Tư duy phát triển ý ở Body 2 đi theo chuỗi logic nào?", o: ["Nêu ý chính đại học -> Nguyên nhân điểm số -> Kết quả đạt bằng cấp danh giá và nghề nghiệp tốt", "Liệt kê các môn học", "Nói xấu các hoạt động ngoài trời"], a: "Nêu ý chính đại học -> Nguyên nhân điểm số -> Kết quả đạt bằng cấp danh giá và nghề nghiệp tốt"},
+                    {q: "20. Từ nối 'To begin with' dùng để làm gì?", o: ["Bắt đầu đưa ra ý đầu tiên trong đoạn thân bài", "Kết thúc bài viết", "Đưa ra một ví dụ ngược lại"], a: "Bắt đầu đưa ra ý đầu tiên trong đoạn thân bài"}
+                ]
+            },
+            3: {
+                prompt: "ĐỀ 3: Research has shown that the transportation of products and people are the main source of pollution worldwide. Some people believe the government should be in charge of this, while others believe it is the fault of individuals. Discuss both views and give your opinion.",
+                wordCount: "Tổng số từ: 290 từ (Đạt chuẩn tối thiểu 250 từ)",
+                essay: `<strong>Introduction</strong>\nOpinions are divided on whether national governments should be responsible for tackling transport-related pollution or if it is the fault of individual citizens. Although state administration plays a massive role in environmental regulation, I am convinced that personal daily choices and lifestyle adjustments are far more essential to solve this global issue.\n\n<strong>Body 1</strong>\nAdmittedly, authorities hold the absolute power and resources to implement large-scale changes in public infrastructure. First of all, the most vital solution is how regional governments can heavily upgrade public transportation networks by introducing eco-friendly electric buses and modern subway trains. Making public transit more affordable and widespread directly encourages communities to leave private vehicles at home, thereby minimizing toxic exhaust fumes. Furthermore, strict state legislation can impose high eco-taxes on cargo ships and transport corporations, forcing logistics companies to adopt greener methods.\n\n<strong>Body 2</strong>\nHowever, I believe that no environmental strategy can succeed without a fundamental shift in individual responsibilities. To begin with, consumer habits determine the actual volume of environmental degradation caused by transportation. Even if a government builds perfect bicycle lanes or bus routes, pollution will continue to skyrocket if citizens stubbornly refuse to change their commute habits and prefer driving cars for personal comfort. Additionally, modern shopping behaviors directly accelerate distribution emissions. The contemporary trend of ordering online deliveries from distant places forces fleets of delivery trucks to operate continuously, resulting in an unsustainable carbon footprint.\n\n<strong>Conclusion</strong>\nIn conclusion, while central governments must invest in clean public networks and enforce industrial laws, I firmly believe that eco-friendly transitions ultimately depend on personal accountability and mindful everyday habits of individuals.`,
+                vocab: [
+                    {w: "tackling transport-related pollution", m: "giải quyết ô nhiễm liên quan đến giao thông"},
+                    {w: "state administration", m: "sự quản lý hành chính của nhà nước / chính phủ"},
+                    {w: "environmental regulation", m: "quy định, luật lệ về môi trường"},
+                    {w: "lifestyle adjustments", m: "những sự điều chỉnh về lối sống"},
+                    {w: "public infrastructure", m: "cơ sở hạ tầng công cộng"},
+                    {w: "public transportation networks", m: "mạng lưới giao thông công cộng"},
+                    {w: "minimizing toxic exhaust fumes", m: "giảm thiểu tối đa khói độc hại thải ra"},
+                    {w: "strict state legislation", m: "luật pháp nghiêm khắc của nhà nước"},
+                    {w: "impose high eco-taxes on", m: "áp đặt mức thuế môi trường cao lên..."},
+                    {w: "logistics companies", m: "các công ty vận tải và hậu cần"},
+                    {w: "fundamental shift", m: "một sự chuyển dịch / thay đổi nền tảng"},
+                    {w: "environmental degradation", m: "sự suy thoái môi trường"},
+                    {w: "skyrocket", m: "tăng vọt lên như tên lửa"},
+                    {w: "commute habits", m: "thói quen di chuyển đi lại hàng ngày"},
+                    {w: "personal comfort", m: "sự thoải mái, tiện nghi cá nhân"},
+                    {w: "accelerate distribution emissions", m: "làm gia tăng tốc độ khí thải từ việc phân phối hàng"},
+                    {w: "unsustainable carbon footprint", m: "lượng phát thải carbon không bền vững (gây hại lớn)"},
+                    {w: "enforce industrial laws", m: "thực thi các điều luật công nghiệp"},
+                    {w: "personal accountability", m: "trách nhiệm giải trình của cá nhân"},
+                    {w: "mindful everyday habits", m: "thói quen hàng ngày có ý thức"}
+                ],
+                grammar: [
+                    {c: "Opinions are divided on whether... or if...", m: "Cấu trúc song hành với whether... or... mở bài mượt mà."},
+                    {c: "Making public transit more affordable... directly encourages...", m: "Sử dụng cụm Danh động từ (Gerund phrase) làm chủ ngữ ăn điểm ngữ pháp cao."},
+                    {c: "Even if a government builds... pollution will continue to...", m: "Cấu trúc câu điều kiện giả định với Even if tạo tính lập luận phản biện."}
+                ],
+                quiz: [
+                    {q: "1. Lập trường cốt lõi của tác giả trong Đề 3 là gì?", o: ["Chính phủ phải chịu trách nhiệm hết", "Lựa chọn và thói quen của mỗi cá nhân mới là yếu tố quyết định", "Cấm hoàn toàn việc đi lại"], a: "Lựa chọn và thói quen của mỗi cá nhân mới là yếu tố quyết định"},
+                    {q: "2. Biện pháp lớn nào chính phủ có thể làm ở Body 1?", o: ["Nâng cấp mạng lưới giao thông công cộng (upgrade public transportation networks) như xe buýt điện, tàu điện ngầm", "Phát tiền cho người dân", "Đóng cửa tất cả các nhà máy vận tải"], a: "Nâng cấp mạng lưới giao thông công cộng (upgrade public transportation networks) như xe buýt điện, tàu điện ngầm"},
+                    {q: "3. 'Minimizing toxic exhaust fumes' có nghĩa là gì?", o: ["Tăng lượng khí thải công nghiệp", "Giảm thiểu tối đa lượng khói độc hại thải ra", "Xây dựng thêm nhà kho"], a: "Giảm thiểu tối đa lượng khói độc hại thải ra"},
+                    {q: "4. Chính phủ có thể làm gì để ép các tập đoàn vận tải (transport corporations) giảm ô nhiễm?", o: ["Tặng bằng khen", "Áp đặt thuế môi trường cao (impose high eco-taxes)", "Mua lại toàn bộ công ty"], a: "Áp đặt thuế môi trường cao (impose high eco-taxes)"},
+                    {q: "5. Tại sao các nỗ lực của chính phủ sẽ thất bại nếu thiếu 'fundamental shift' từ người dân?", o: ["Vì người dân sẽ biểu tình phản đối", "Vì nếu người dân bướng bỉnh từ chối thay đổi thói quen di chuyển, ô nhiễm vẫn sẽ tăng vọt", "Vì xe công cộng quá đắt đỏ"], a: "Vì nếu người dân bướng bỉnh từ chối thay đổi thói quen di chuyển, ô nhiễm vẫn sẽ tăng vọt"},
+                    {q: "6. Thói quen mua sắm hiện đại nào của cá nhân làm tăng mạnh khí thải vận tải?", o: ["Đi chợ truyền thống gần nhà", "Xu hướng đặt hàng trực tuyến giao từ xa (ordering online deliveries)", "Chỉ mua đồ cũ"], a: "Xu hướng đặt hàng trực tuyến giao từ xa (ordering online deliveries)"},
+                    {q: "7. Hậu quả của việc xe tải giao hàng chạy liên tục là tạo ra cái gì?", o: ["Lượng phát thải carbon không bền vững (unsustainable carbon footprint)", "Nhiều việc làm lương cao", "Hệ thống đường sá đẹp hơn"], a: "Lượng phát thải carbon không bền vững (unsustainable carbon footprint)"},
+                    {q: "8. Từ 'skyrocket' mô tả xu hướng nào?", o: ["Giảm mạnh đột ngột", "Tăng vọt lên với tốc độ cực nhanh", "Giữ nguyên không đổi"], a: "Tăng vọt lên với tốc độ cực nhanh"},
+                    {q: "9. Điền từ phù hợp: 'lifestyle _________'", o: ["adjustments", "footprints", "emissions"], a: "adjustments"},
+                    {q: "10. 'Personal accountability' ở phần kết bài nghĩa là gì?", o: ["Sự hỗ trợ từ xã hội", "Trách nhiệm cá nhân tự ý thức hành vi", "Số tiền đóng phạt"], a: "Trách nhiệm cá nhân tự ý thức hành vi"},
+                    {q: "11. Từ nào đồng nghĩa với 'solve' ở Introduction?", o: ["tackling", "minimizing", "accelerating"], a: "tackling"},
+                    {q: "12. Điền từ thích hợp: 'public _________' (cơ sở hạ tầng công cộng).", o: ["infrastructure", "legislation", "degradation"], a: "infrastructure"},
+                    {q: "13. Cụm từ 'toxic exhaust fumes' chỉ loại chất thải nào?", o: ["Rác thải nhựa sinh hoạt", "Khói khí thải độc hại từ động cơ xe cộ", "Nước thải công nghiệp"], a: "Khói khí thải độc hại từ động cơ xe cộ"},
+                    {q: "14. Cụm từ 'logistics companies' nói về ngành nghề nào?", o: ["Các công ty thiết kế thời trang", "Các công ty vận tải, giao nhận và hậu cần", "Trường học lái xe"], a: "Các công ty vận tải, giao nhận và hậu cần"},
+                    {q: "15. Từ 'environmental degradation' nghĩa là gì?", o: ["Sự cải thiện môi trường", "Sự suy thoái / tàn phá môi trường", "Hệ sinh thái tự nhiên"], a: "Sự suy thoái / tàn phá môi trường"},
+                    {q: "16. Tại sao việc dùng cấu trúc 'Making public transit... directly encourages...' lại giúp tăng điểm ngữ pháp?", o: ["Vì nó biến cụm V-ing thành một chủ ngữ ngữ pháp, thể hiện sự linh hoạt cấu trúc nâng cao", "Vì câu này bắt buộc phải dùng dấu phẩy", "Vì câu này siêu dài"], a: "Vì nó biến cụm V-ing thành một chủ ngữ ngữ pháp, thể hiện sự linh hoạt cấu trúc nâng cao"},
+                    {q: "17. Điền từ thích hợp: 'commute _________'", o: ["habits", "taxes", "networks"], a: "habits"},
+                    {q: "18. Từ 'mindful' trong 'mindful everyday habits' có nghĩa là gì?", o: ["Cẩu thả, vô tư", "Có ý thức, suy nghĩ cẩn trọng trước khi hành động", "Rất nhanh chóng"], a: "Có ý thức, suy nghĩ cẩn trọng trước khi hành động"},
+                    {q: "19. Chuỗi logic phát triển ý Idea 1 ở Body 2 là gì?", o: ["Thói quen cá nhân -> Dù có xe buýt nhưng vẫn chọn ô tô riêng vì sự thoải mái -> Ô nhiễm tiếp tục tăng vọt", "Khen ngợi xe đạp", "Chê bai chính phủ nghèo"], a: "Thói quen cá nhân -> Dù có xe buýt nhưng vẫn chọn ô tô riêng vì sự thoải mái -> Ô nhiễm tiếp tục tăng vọt"},
+                    {q: "20. Bản chất từ 'carbon footprint' là gì?", o: ["Dấu chân người dính than", "Lượng khí thải carbon độc hại một thực thể thải ra môi trường", "Một loại năng lượng mới"], a: "Lượng khí thải carbon độc hại một thực thể thải ra môi trường"}
+                ]
+            },
+            4: {
+                prompt: "ĐỀ 4: Directors of large organizations earn much higher salaries than ordinary employees do. Some people think it is necessary, but others are of the opinion that it is unfair. Discuss both views and give your own opinion.",
+                wordCount: "Tổng số từ: 298 từ (Đạt chuẩn tối thiểu 250 từ)",
+                essay: `<strong>Introduction</strong>\nOpinions are divided on whether the massive income disparity between corporate directors and ordinary workers is acceptable or unjust. Although a wide wage gap can sometimes cause negative feelings among staff, I strongly believe that offering high executive packages is completely necessary to ensure a company’s survival and commercial success.\n\n<strong>Body 1</strong>\nAdmittedly, extreme salary gaps can lead to severe issues within an organization's work environment. The primary cause is that excessive income disparity easily demotivates frontline employees. When standard workers perform labor-intensive tasks every day but receive a tiny fraction of a director’s earnings, they may feel deeply unvalued. Consequently, this widespread resentment can reduce overall labor productivity, damage corporate culture, and increase employee turnover rates as staff lose their loyalty and look for other jobs.\n\n<strong>Body 2</strong>\nHowever, I am convinced that high salaries for top executives are fully justified due to the nature of their positions. Firstly, company directors carry immense operational responsibilities and face tremendous psychological pressure. They must make vital strategic decisions daily that dictate the entire business model; a minor miscalculation can result in total bankruptcy and cause thousands of workers to lose their jobs. Therefore, high compensation is a fair return for such risks. Secondly, high packages allow large organizations to attract and retain top-tier talents. Good leaders are rare, and competitive rival companies are always willing to headhunt them by offering superior benefits.\n\n<strong>Conclusion</strong>\nIn conclusion, while an unbalanced salary structure might affect standard worker morale, I believe that high executive wages are indispensable for compensating heavy managerial pressure and securing brilliant leaders who can drive business growth.`,
+                vocab: [
+                    {w: "massive income disparity", m: "sự chênh lệch thu nhập khổng lồ"},
+                    {w: "unjust", m: "bất công, không công bằng"},
+                    {w: "wage gap", m: "khoảng cách tiền lương"},
+                    {w: "high executive packages", m: "các gói lương thưởng cao cho nhà quản lý / điều hành"},
+                    {w: "demotivates frontline employees", m: "làm giảm động lực của những nhân viên tuyến đầu / cấp dưới"},
+                    {w: "labor-intensive tasks", m: "những công việc tốn nhiều sức lao động / nặng nhọc"},
+                    {w: "tiny fraction", m: "một phần nhỏ bé / một phần rất nhỏ"},
+                    {w: "widespread resentment", m: "sự oán hận / bất bình lan rộng"},
+                    {w: "labor productivity", m: "năng suất lao động"},
+                    {w: "employee turnover rates", m: "tỷ lệ nghỉ việc / nhảy việc của nhân viên"},
+                    {w: "fully justified", m: "hoàn toàn hợp lý, chính đáng"},
+                    {w: "immense operational responsibilities", m: "trách nhiệm vận hành vô cùng to lớn"},
+                    {w: "psychological pressure", m: "áp lực về mặt tâm lý"},
+                    {w: "strategic decisions", m: "các quyết định mang tính chiến lược"},
+                    {w: "minor miscalculation", m: "một sai sót / tính toán sai nhỏ"},
+                    {w: "total bankruptcy", m: "sự phá sản hoàn toàn"},
+                    {w: "fair return", m: "sự đền đáp công bằng"},
+                    {w: "attract and retain top-tier talents", m: "thu hút và giữ chân các tài năng hàng đầu"},
+                    {w: "rival companies", m: "các công ty đối thủ cạnh tranh"},
+                    {w: "headhunt", m: "săn đầu người / chiêu mộ tài năng"}
+                ],
+                grammar: [
+                    {c: "When standard workers perform... they may feel deeply...", m: "Mệnh đề trạng ngữ chỉ thời gian kết hợp trạng từ mức độ 'deeply'."},
+                    {c: "They must make vital strategic decisions daily that dictate...", m: "Sử dụng mệnh đề quan hệ 'that' để giải thích tính chất cho quyết định."},
+                    {c: "..., while an unbalanced salary structure might..., I believe...", m: "Cấu trúc tương phản đối lập dùng 'while' ở kết bài để tóm tắt trọn vẹn."}
+                ],
+                quiz: [
+                    {q: "1. Tác giả nghĩ gì về việc giám đốc nhận lương siêu cao ở Đề 4?", o: ["Nó hoàn toàn bất công và cần cấm đoán", "Nó hoàn toàn cần thiết và hợp lý (completely necessary & fully justified)", "Nên chia đều tiền cho tất cả mọi người"], a: "Nó hoàn toàn cần thiết và hợp lý (completely necessary & fully justified)"},
+                    {q: "2. Tác hại tiêu cực được phân tích ở Body 1 của khoảng cách lương lớn là gì?", o: ["Làm tăng doanh thu công ty", "Làm giảm động lực của nhân viên cấp dưới (demotivates frontline employees) và tăng tỷ lệ nghỉ việc", "Giúp nhân viên đoàn kết hơn"], a: "Làm giảm động lực của những nhân viên tuyến đầu / cấp dưới (demotivates frontline employees) và tăng tỷ lệ nghỉ việc"},
+                    {q: "3. 'Labor-intensive tasks' dùng để chỉ công việc gì?", o: ["Công việc ngồi chơi xơi nước", "Công việc nặng nhọc, tốn rất nhiều sức lao động", "Công việc lập trình máy tính"], a: "Công việc nặng nhọc, tốn rất nhiều sức lao động"},
+                    {q: "4. Cụm từ 'tiny fraction' mô tả điều gì về tiền lương nhân viên so với giám đốc?", o: ["Bằng một nửa", "Chỉ là một phần nhỏ bé, không đáng kể", "Lớn hơn rất nhiều"], a: "Chỉ là một phần nhỏ bé, không đáng kể"},
+                    {q: "5. 'Employee turnover rates' tăng cao có nghĩa là gì?", o: ["Nhiều người xin vào công ty", "Tỷ lệ nhân viên bỏ việc, nhảy việc tăng cao", "Năng suất lao động tăng đột biến"], a: "Tỷ lệ nhân viên bỏ việc, nhảy việc tăng cao"},
+                    {q: "6. Lý do đầu tiên bảo vệ mức lương giám đốc ở Body 2 là gì?", o: ["Họ đi làm sớm nhất", "Họ gánh vác trách nhiệm vận hành khổng lồ và áp lực tâm lý nặng nề (immense operational responsibilities & psychological pressure)", "Họ có nhiều bằng cấp hơn"], a: "Họ gánh vác trách nhiệm vận hành khổng lồ và áp lực tâm lý nặng nề (immense operational responsibilities & psychological pressure)"},
+                    {q: "7. Điều gì xảy ra nếu giám đốc phạm phải một sai sót nhỏ trong tính toán ('minor miscalculation')?", o: ["Công ty được thưởng tiền", "Dẫn tới phá sản hoàn toàn (total bankruptcy) khiến hàng ngàn người mất việc", "Không ảnh hưởng gì"], a: "Dẫn tới phá sản hoàn toàn (total bankruptcy) khiến hàng ngàn người mất việc"},
+                    {q: "8. Lý do thứ hai được đưa ra ở Body 2 để trả lương cao là gì?", o: ["Để tiết kiệm tiền thuế", "Để thu hút và giữ chân tài năng hàng đầu (attract and retain top-tier talents) tránh bị đối thủ săn mất", "Để đi du lịch nước ngoài"], a: "Để thu hút và giữ chân tài năng hàng đầu (attract and retain top-tier talents) tránh bị đối thủ săn mất"},
+                    {q: "9. Từ 'headhunt' trong bài mẫu nghĩa là gì?", o: ["Đuổi việc nhân viên", "Săn đầu người / lôi kéo chiêu mộ nhân tài từ công ty khác", "Phạt tiền đối thủ"], a: "Săn đầu người / lôi kéo chiêu mộ nhân tài từ công ty khác"},
+                    {q: "10. Cụm từ nào nghĩa là 'hoàn toàn hợp lý, chính đáng'?", o: ["fully justified", "massive income disparity", "widespread resentment"], a: "fully justified"},
+                    {q: "11. Từ nào trái nghĩa với 'fair' (công bằng)?", o: ["unjust", "indispensable", "immense"], a: "unjust"},
+                    {q: "12. Điền từ phù hợp: 'widespread _________'", o: ["resentment", "fraction", "turnover"], a: "resentment"},
+                    {q: "13. Điền từ: 'labor _________'", o: ["productivity", "pressure", "decision"], a: "productivity"},
+                    {q: "14. Cụm từ 'strategic decisions' nghĩa là gì?", o: ["Quyết định vặt vãnh hàng ngày", "Các quyết định mang tính chiến lược lâu dài cho doanh nghiệp", "Quyết định nghỉ phép"], a: "Các quyết định mang tính chiến lược lâu dài cho doanh nghiệp"},
+                    {q: "15. Từ 'morale' ở phần kết luận nghĩa là gì?", o: ["Tiền thưởng", "Tinh thần / nhuệ khí làm việc của nhân viên", "Kỹ năng chuyên môn"], a: "Tinh thần / nhuệ khí làm việc của nhân viên"},
+                    {q: "16. Điền từ: 'fair _________'", o: ["return", "risk", "gap"], a: "return"},
+                    {q: "17. 'Massive income disparity' nghĩa là gì?", o: ["Sự bình đẳng thu nhập tuyệt đối", "Sự chênh lệch thu nhập khổng lồ giữa các vị trí", "Sự tăng trưởng kinh tế"], a: "Sự chênh lệch thu nhập khổng lồ giữa các vị trí"},
+                    {q: "18. Cụm từ 'top-tier talents' dùng để chỉ ai?", o: ["Nhân viên mới thử việc", "Những tài năng xuất chúng thuộc nhóm hàng đầu", "Khách hàng VIP"], a: "Những tài năng xuất chúng thuộc nhóm hàng đầu"},
+                    {q: "19. Cấu trúc ngữ pháp chứa đại từ quan hệ 'that' trong 'decisions daily that dictate...' đóng vai trò gì?", o: ["Làm câu văn sai ngữ pháp", "Mở rộng thông tin bổ nghĩa cho danh từ đứng trước một cách chặt chẽ", "Thay thế cho kết bài"], a: "Mở rộng thông tin bổ nghĩa cho danh từ đứng trước một cách chặt chẽ"},
+                    {q: "20. Từ nối 'Consequently' chỉ mối quan hệ gì?", o: ["Quan hệ tương phản", "Quan hệ nguyên nhân - hệ quả / dẫn tới kết quả là", "Quan hệ thời gian"], a: "Quan hệ nguyên nhân - hệ quả / dẫn tới kết quả là"}
+                ]
+            },
+            5: {
+                prompt: "ĐỀ 5: Some people believe that children that commit crimes should be punished. Others think the parents should be punished instead. Discuss both views and give your own opinion.",
+                wordCount: "Tổng số từ: 292 từ (Đạt chuẩn tối thiểu 250 từ)",
+                essay: `<strong>Introduction</strong>\nOpinions are divided on whether young offenders who break the law should face judicial punishments directly or if their parents should be held legally responsible. Although family environment drastically shapes a child's development, I firmly believe that juvenile delinquents must face legal consequences directly to learn accountability.\n\n<strong>Body 1</strong>\nAdmittedly, there are solid reasons why some advocates suggest penalizing parents for their children's crimes. The primary argument is that criminal behaviors in minors often stem from severe parental neglect or a complete lack of moral guidance at home. For instance, parents who are constantly absent or fail to supervise their kids properly allow them to fall into bad company and engage in illegal activities. Therefore, punishing guardians is seen as a necessary method to force families to monitor their children's actions more closely and prevent future wrongdoings.\n\n<strong>Body 2</strong>\nHowever, I am convinced that holding children personally accountable for their unlawful acts is indispensable for social safety. To begin with, modern teenagers possess sufficient cognitive awareness to distinguish right from wrong. Underage individuals understand perfectly well that serious offenses like stealing, vandalism, or physical assault are illegal. If the justice system shifts the blame entirely to parents, young lawbreakers will develop a sense of absolute immunity. Consequently, they will continue committing crimes without fear of personal penalty. Additionally, direct punishment creates a vital deterrent effect, educating the individual offender and warning other minors against following dangerous paths.\n\n<strong>Conclusion</strong>\nIn conclusion, while parental supervision is crucial in preventing youth misconduct, I believe that juvenile offenders must be punished directly for their own actions to understand the weight of the law and protect the community.`,
+                vocab: [
+                    {w: "young offenders / juvenile delinquents", m: "người phạm tội vị thành niên / tội phạm trẻ tuổi"},
+                    {w: "break the law / unlawful acts", m: "vi phạm pháp luật / hành vi phạm pháp"},
+                    {w: "judicial punishments / legal consequences", m: "hình phạt tư pháp / hậu quả pháp lý"},
+                    {w: "held legally responsible", m: "bị quy trách nhiệm pháp lý trước pháp luật"},
+                    {w: "drastically shapes", m: "nhào nặn / định hình một cách mạnh mẽ"},
+                    {w: "learn accountability", m: "học cách chịu trách nhiệm về hành vi của mình"},
+                    {w: "penalizing parents", m: "xử phạt / trừng phạt cha mẹ"},
+                    {w: "stem from", m: "bắt nguồn từ / bắt rễ từ"},
+                    {w: "parental neglect", m: "sự lơ là, bỏ bê của cha mẹ"},
+                    {w: "moral guidance", m: "sự định hướng đạo đức, dạy bảo đúng sai"},
+                    {w: "fail to supervise", m: "thất bại trong việc giám sát / không quản lý"},
+                    {w: "fall into bad company", m: "rơi vào nhóm bạn xấu, sa ngã"},
+                    {w: "punishing guardians", m: "xử phạt người giám hộ / người nuôi nấng"},
+                    {w: "personally accountable", m: "tự chịu trách nhiệm cá nhân"},
+                    {w: "cognitive awareness", m: "nhận thức về mặt tư duy / trí tuệ"},
+                    {w: "distinguish right from wrong", m: "phân biệt rõ ràng đúng và sai"},
+                    {w: "absolute immunity", m: "sự miễn trừ tuyệt đối (không sợ bị phạt)"},
+                    {w: "shifts the blame entirely to", m: "đổ toàn bộ tội lỗi / trách nhiệm sang..."},
+                    {w: "deterrent effect", m: "tác dụng răn đe, làm gương"},
+                    {w: "youth misconduct", m: "hành vi sai trái của giới trẻ"}
+                ],
+                grammar: [
+                    {c: "The primary argument is that criminal behaviors... often stem from...", m: "Sử dụng mệnh đề danh ngữ với 'that' để định nghĩa luận điểm rõ ràng."},
+                    {c: "If the justice system shifts the blame..., young lawbreakers will...", m: "Cấu trúc câu điều kiện loại 1 thể hiện hệ quả logic giả định chắc chắn."},
+                    {c: "..., educating the individual offender and warning other minors...", m: "Rút gọn mệnh đề kết quả bằng cụm V-ing song hành rất mượt mà."}
+                ],
+                quiz: [
+                    {q: "1. Ý kiến cốt lõi của tác giả trong Đề 5 là gì?", o: ["Nên phạt cha mẹ thay cho con", "Trẻ em phạm tội phải đối mặt trực tiếp với hình phạt để học cách có trách nhiệm", "Tha bổng hoàn toàn cho trẻ em"], a: "Trẻ em phạm tội phải đối mặt trực tiếp với hình phạt để học cách có trách nhiệm"},
+                    {q: "2. Lý do người ta đòi phạt cha mẹ ở Body 1 là gì?", o: ["Vì cha mẹ có nhiều tiền đóng phạt hơn", "Vì hành vi phạm tội của trẻ hay bắt nguồn từ sự bỏ bê của cha mẹ và thiếu giáo dục đạo đức tại nhà (parental neglect & lack of moral guidance)", "Vì cha mẹ ép con đi ăn trộm"], a: "Vì hành vi phạm tội của trẻ hay bắt nguồn từ sự bỏ bê của cha mẹ và thiếu giáo dục đạo đức tại nhà (parental neglect & lack of moral guidance)"},
+                    {q: "3. 'Fall into bad company' nghĩa là gì?", o: ["Xin vào một công ty làm việc tồi tệ", "Sa ngã, rơi vào nhóm bạn bè xấu, lôi kéo", "Đi du lịch một mình"], a: "Sa ngã, rơi vào nhóm bạn bè xấu, lôi kéo"},
+                    {q: "4. Việc phạt người giám hộ ('punishing guardians') có tác dụng kỳ vọng gì?", o: ["Làm gia đình tan vỡ", "Ép buộc các gia đình phải giám sát con cái chặt chẽ hơn", "Giúp chính phủ tăng ngân sách"], a: "Ép buộc các gia đình phải giám sát con cái chặt chẽ hơn"},
+                    {q: "5. Tại sao tác giả cho rằng thiếu niên ngày nay phải tự chịu trách nhiệm ở Body 2?", o: ["Vì họ có thể tự kiếm tiền", "Vì họ có đủ nhận thức tư duy để phân biệt đúng sai (possess sufficient cognitive awareness to distinguish right from wrong)", "Vì họ không sống cùng cha mẹ"], a: "Vì họ có đủ nhận thức tư duy để phân biệt đúng sai (possess sufficient cognitive awareness to distinguish right from wrong)"},
+                    {q: "6. Điều nguy hiểm gì xảy ra nếu luật pháp đổ hết lỗi lên đầu cha mẹ?", o: ["Cha mẹ sẽ bỏ trốn", "Trẻ em sẽ ảo tưởng mình có sự miễn trừ tuyệt đối (absolute immunity) và tiếp tục phạm tội không sợ hãi", "Trường học sẽ bị đóng cửa"], a: "Trẻ em sẽ ảo tưởng mình có sự miễn trừ tuyệt đối (absolute immunity) và tiếp tục phạm tội không sợ hãi"},
+                    {q: "7. Phạt trực tiếp trẻ phạm tội đem lại lợi ích chiến lược gì cho xã hội?", o: ["Tạo ra tác dụng răn đe mạnh mẽ (deterrent effect) giúp cảnh báo các bạn trẻ khác", "Giúp trẻ học giỏi hơn", "Tiết kiệm thời gian xét xử"], a: "Tạo ra tác dụng răn đe mạnh mẽ (deterrent effect) giúp cảnh báo các bạn trẻ khác"},
+                    {q: "8. Cụm từ nào đồng nghĩa với 'young criminals'?", o: ["juvenile delinquents / young offenders", "punishing guardians", "youth misconduct"], a: "juvenile delinquents / young offenders"},
+                    {q: "9. Từ 'cognitive awareness' nghĩa là gì?", o: ["Nhận thức về tư duy / trí tuệ", "Tình trạng sức khỏe thể chất", "Kỹ năng giao tiếp xã hội"], a: "Nhận thức về tư duy / trí tuệ"},
+                    {q: "10. Kết bài khẳng định trẻ phải chịu phạt để hiểu được cái gì?", o: ["Hiểu được tình thương của cha mẹ", "Hiểu được sức nặng của pháp luật (the weight of the law)", "Hiểu cách kiếm tiền"], a: "Hiểu được sức nặng của pháp luật (the weight of the law)"},
+                    {q: "11. 'Stem from' đồng nghĩa với từ nào?", o: ["Lead to", "Come from / Originates from", "Result in"], a: "Come from / Originates from"},
+                    {q: "12. Cụm từ nào có nghĩa là 'vi phạm pháp luật'?", o: ["break the law / unlawful acts", "judicial punishments", "moral guidance"], a: "break the law / unlawful acts"},
+                    {q: "13. Điền từ phù hợp: 'parental _________'", o: ["neglect", "immunity", "misconduct"], a: "neglect"},
+                    {q: "14. Từ 'vandalism' trong phần giải thích nghĩa là gì?", o: ["Hành vi trộm cắp tiền bạc", "Hành vi cố ý phá hoại tài sản công cộng / của người khác", "Tội giết người"], a: "Hành vi cố ý phá hoại tài sản công cộng / của người khác"},
+                    {q: "15. Điền từ: 'distinguish right from _________'", o: ["wrong", "good", "correct"], a: "wrong"},
+                    {q: "16. Trong câu dùng 'If the justice system shifts...', việc dùng câu điều kiện loại 1 nhằm mục đích gì?", o: ["Diễn tả một sự thật hiển nhiên ở quá khứ", "Lập luận logic chỉ ra hệ quả tất yếu sẽ xảy ra trong thực tế nếu áp dụng sai luật", "Đưa ra lời khuyên hoang đường"], a: "Lập luận logic chỉ ra hệ quả tất yếu sẽ xảy ra trong thực tế nếu áp dụng sai luật"},
+                    {q: "17. Điền từ: 'deterrent _________'", o: ["effect", "guidance", "penalty"], a: "effect"},
+                    {q: "18. Từ 'misconduct' có nghĩa là gì?", o: ["Hành vi chuẩn mực, tốt đẹp", "Hành vi sai trái, lệch chuẩn đạo đức hoặc pháp luật", "Sự thành công vang dội"], a: "Hành vi sai trái, lệch chuẩn đạo đức hoặc pháp luật"},
+                    {q: "19. Điền từ: 'held legally _________'", o: ["responsible", "neglect", "immune"], a: "responsible"},
+                    {q: "20. Tiêu chí Task Achievement được đáp ứng trọn vẹn ở Body 2 nhờ chuỗi ý nào?", o: ["Khẳng định nhận thức của trẻ -> Chỉ ra hậu quả nếu bao che (lờn luật) -> Khẳng định giá trị răn đe của hình phạt trực tiếp", "Chê trách cha mẹ nuông chiều", "Liệt kê danh sách các nhà tù"], a: "Khẳng định nhận thức của trẻ -> Chỉ ra hậu quả nếu bao che (lờn luật) -> Khẳng định giá trị răn đe của hình phạt trực tiếp"}
+                ]
+            }
+        };
+
+        let currentTopicId = 1;
+        let currentQ = 0;
+        let score = 0;
+
+        // TỰ ĐỘNG KHỞI TẠO HIỆU ỨNG ÂM THANH SẠCH
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playSound(type) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain); gain.connect(audioCtx.destination);
+            if (type === 'correct') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+                osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1);
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+            } else {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(140, audioCtx.currentTime);
+                osc.frequency.linearRampToValueAtTime(70, audioCtx.currentTime + 0.2);
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+            }
+            osc.start(); osc.stop(audioCtx.currentTime + 0.25);
+        }
+
+        // PHÁO HOA ĂN MỪNG CHÚC MỪNG HỌC VIÊN
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        let pieces = [];
+        function triggerConfetti() {
+            pieces = []; canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+            for (let i = 0; i < 60; i++) {
+                pieces.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    size: Math.random() * 8 + 6,
+                    color: ['#FF6B8B', '#00C9A7', '#FDCB6E', '#8854C0'][Math.floor(Math.random() * 4)],
+                    speed: Math.random() * 4 + 3
+                });
+            }
+            animateConfetti();
+        }
+        function animateConfetti() {
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            let active = false;
+            pieces.forEach(p => {
+                if(p.y < canvas.height) {
+                    active = true; p.y += p.speed;
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(p.x, p.y, p.size, p.size);
+                }
+            });
+            if(active) requestAnimationFrame(animateConfetti);
+        }
+
+        // TẠO MENU CHỌN ĐỀ BÀI TỰ ĐỘNG
+        function initApp() {
+            const menuContainer = document.getElementById('topic-menu-container');
+            menuContainer.innerHTML = '';
+            Object.keys(database).forEach(id => {
+                const btn = document.createElement('button');
+                btn.className = `menu-btn ${id == 1 ? 'active' : ''}`;
+                btn.id = `btn-topic-${id}`;
+                btn.innerText = `Đề Luyện Tập Lớp Số 0${id}`;
+                btn.onclick = () => switchTopic(id);
+                menuContainer.appendChild(btn);
+            });
+            loadTopicData(1);
+        }
+
+        // CHUYỂN ĐỔI ĐỀ BÀI VÀ CẬP NHẬT TOÀN BỘ GIAO DIỆN KHÔNG LỖI FONT
+        function switchTopic(id) {
+            currentTopicId = id;
+            document.querySelectorAll('.menu-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`btn-topic-${id}`).classList.add('active');
+            loadTopicData(id);
+        }
+
+        function loadTopicData(id) {
+            const data = database[id];
+            document.getElementById('current-prompt').innerHTML = `<strong>ĐỀ BÀI ĐANG CHỌN:</strong><br>${data.prompt}`;
+            document.getElementById('current-essay').innerHTML = data.essay.replace(/\n/g, '<br>');
+            document.getElementById('word-count-display').innerText = data.wordCount;
+
+            // Nạp bảng từ vựng
+            const vocabTbody = document.querySelector('#vocab-table tbody');
+            vocabTbody.innerHTML = '';
+            data.vocab.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td><strong style="color:#6C5CE7;">${item.w}</strong></td><td>${item.m}</td>`;
+                vocabTbody.appendChild(row);
+            });
+
+            // Nạp bảng ngữ pháp cấu trúc
+            const grammarTbody = document.querySelector('#grammar-table tbody');
+            grammarTbody.innerHTML = '';
+            data.grammar.forEach(g => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td><code style="background:#f1f5f9; padding:4px 8px; border-radius:6px; font-weight:700; color:#db2777;">${g.c}</code></td><td>${g.m}</td>`;
+                grammarTbody.appendChild(row);
+            });
+
+            // Reset bài tập trắc nghiệm theo đề mới
+            currentQ = 0;
+            score = 0;
+            resetQuizUI();
+        }
+
+        // ĐỔI TAB CHỨC NĂNG TẠI KHUNG CHÍNH
+        function changeTab(event, tabId) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-link').forEach(l => l.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // BỘ ENGINE GAME TRẮC NGHIỆM KHÔNG LỖI CHẠY KHÔNG GIỚI HẠN CHO 5 ĐỀ
+        function loadQuizQuestion() {
+            const data = database[currentTopicId];
+            const quizBox = document.getElementById('quiz-box');
+            
+            if (currentQ >= data.quiz.length) {
+                quizBox.innerHTML = `
+                    <div class="score-board">
+                        <h2>🎉 HOÀN THÀNH THỬ THÁCH ĐỀ 0${currentTopicId}!</h2>
+                        <p style="font-size:1.2rem; margin-bottom:1rem; font-weight:600;">Học sinh xuất sắc trả lời đúng <strong>${score} / 20</strong> câu hỏi chiến thuật.</p>
+                        <p style="color:#666;">Em đã làm chủ tư duy phát triển ý và bộ từ vựng then chốt của bài viết này!</p>
+                        <button class="reset-btn" onclick="resetQuizUI()">Luyện tập lại đề này</button>
+                    </div>
+                `;
+                return;
+            }
+
+            const currentQuestionData = data.quiz[currentQ];
+            document.getElementById('quiz-progress').innerText = `Câu hỏi kiểm tra: ${currentQ + 1} / ${data.quiz.length}`;
+            document.getElementById('quiz-question').innerText = currentQuestionData.q;
+
+            const optionsGrid = document.getElementById('quiz-options');
+            optionsGrid.innerHTML = '';
+
+            currentQuestionData.o.forEach(opt => {
+                const button = document.createElement('button');
+                button.className = 'opt-btn';
+                button.innerText = opt;
+                button.onclick = () => verifyAnswer(button, opt, currentQuestionData.a);
+                optionsGrid.appendChild(button);
+            });
+        }
+
+        function verifyAnswer(button, selected, correct) {
+            const allButtons = document.querySelectorAll('.opt-btn');
+            allButtons.forEach(b => b.disabled = true);
+
+            if (selected === correct) {
+                button.classList.add('correct');
+                playSound('correct');
+                triggerConfetti();
+                score++;
+                setTimeout(() => { currentQ++; loadQuizQuestion(); }, 1500);
+            } else {
+                button.classList.add('shake');
+                playSound('wrong');
+                allButtons.forEach(b => { if (b.innerText === correct) b.classList.add('correct'); });
+                setTimeout(() => { currentQ++; loadQuizQuestion(); }, 2500);
+            }
+        }
+
+        function resetQuizUI() {
+            const quizBox = document.getElementById('quiz-box');
+            quizBox.innerHTML = `
+                <div class="quiz-progress" id="quiz-progress"></div>
+                <div class="quiz-question-text" id="quiz-question"></div>
+                <div class="options-grid" id="quiz-options"></div>
+            `;
+            currentQ = 0;
+            score = 0;
+            loadQuizQuestion();
+        }
+
+        window.onload = initApp;
+    </script>
+</body>
+</html>
